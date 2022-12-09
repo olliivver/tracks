@@ -1,7 +1,19 @@
-import {Link} from 'react-router-dom';
 import styled from 'styled-components';
+import { useEffect, useState } from 'react';
+const { REACT_APP_NEWS_KEY } = window.__RUNTIME_CONFIG__;
 
 const News = () => {
+
+  // useEffect(() => {
+  //   fetch(
+  //     `https://newsapi.org/v2/everything?q=train+montreal&apiKey=${REACT_APP_NEWS_KEY}`
+  //   )
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //     });
+  // }, []);
+
   return (
     <StyledNews>
       <ul>

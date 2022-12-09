@@ -1,10 +1,10 @@
 const express = require("express");
 const helmet = require("helmet");
 const morgan = require("morgan");
-
+require("dotenv").config();
 
 const app = express();
-const port = 8000;
+const PORT = process.env.PORT || 8000;
 
 const {
   buyTicket,
@@ -28,6 +28,7 @@ const {
 app.use(express.json())
 app.use(helmet())
 app.use(morgan('tiny'))
+app.use(express.static("../build"))
 
 
 app.get("/", (req, res) => {
@@ -52,6 +53,6 @@ app.patch("/report-closed", updateCrossingClosed);
 app.delete("/delete-crossing/:id", deleteCrossing)
 
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}`);
 });

@@ -3,12 +3,14 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "helmet": "^6.0.0",
+    "heroku": "^7.67.1",
     "mongodb": "^4.12.0",
     "morgan": "^1.10.0",
     "node": "^19.1.0",
     "nodemon": "^2.0.20"
   },
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.jss",
+    "dev": "nodemon index.js"
   }
 }

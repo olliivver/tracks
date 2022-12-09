@@ -1,10 +1,14 @@
 {
-  "dependencies": {
-    "@react-google-maps/api": "^2.17.0",
-    "dotenv": "^16.0.3",
-    "react-map-gl": "^7.0.19"
+  "name": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build":"yarn workspace client build",
+    "start": "yarn workspace server start"
   },
-  "devDependencies": {
-    "@types/node": "^18.11.9"
-  }
+  "private":"true",
+  "workspaces":[
+    "server",
+    "client"
+  ]
 }

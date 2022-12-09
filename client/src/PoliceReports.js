@@ -9,7 +9,7 @@ const PoliceReports = () => {
     fetch("/get-police-reports")
       .then((res) => res.json())
       .then((data) => {
-        setPoliceReport(data.data);
+        setPoliceReport(data.data.reverse());
       });
   }, []);
 let crossingArr = [];
@@ -31,7 +31,7 @@ let crossingArr = [];
           return (
             <div key={name}>
               <h3>{name}</h3>
-              {policeReport.reverse().map((report) => {
+              {policeReport.map((report) => {
                 if (report.crossingName === name) {
                   return (
                     <div key={report.timeStamp}>
