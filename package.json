@@ -1,17 +1,3 @@
 {
-  "name": "tracks",
-  "version": "1.0.0",
-  "engines":{
-    "yarn": "1.22.19"
-  },
-  "main": "index.js",
-  "scripts": {
-    "build":"yarn workspace client build",
-    "start": "yarn workspace server start"
-  },
-  "private":"true",
-  "workspaces":[
-    "server",
-    "client"
-  ]
+  "dependencies": {}
 }
